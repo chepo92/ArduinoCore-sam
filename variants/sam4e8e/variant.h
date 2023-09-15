@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_SAM4S4E // SAM4S4A ( 48 pin  )
-#define _VARIANT_SAM4S4E
+#ifndef _VARIANT_SAM4E8E // SAM4S4A ( 48 pin  )
+#define _VARIANT_SAM4E8E
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -227,6 +227,6 @@ extern "C"{
 
 // #define SERIAL_PORT_HARDWARE        Serial
 
-#endif /* _VARIANT_SAM4S4E */
+#endif /* _VARIANT_SAM4E8E */
 
 
