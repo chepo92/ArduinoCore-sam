@@ -149,36 +149,36 @@ void init( void )
   WDT_Disable(WDT);
 
   // Initialize C library
-  __libc_init_array();
+  // __libc_init_array();
 
   // Disable pull-up on every pin
-  for (unsigned i = 0; i < PINS_COUNT; i++)
-	  digitalWrite(i, LOW);
+  // for (unsigned i = 0; i < PINS_COUNT; i++)
+	//   digitalWrite(i, LOW);
 
   // Enable parallel access on PIO output data registers
-  PIOA->PIO_OWER = 0xFFFFFFFF;
-  PIOB->PIO_OWER = 0xFFFFFFFF;
+  // PIOA->PIO_OWER = 0xFFFFFFFF;
+  // PIOB->PIO_OWER = 0xFFFFFFFF;
   
 
 
   // Initialize Serial port U(S)ART pins
-  PIO_Configure(
-    g_APinDescription[PINS_UART].pPort,
-    g_APinDescription[PINS_UART].ulPinType,
-    g_APinDescription[PINS_UART].ulPin,
-    g_APinDescription[PINS_UART].ulPinConfiguration);
-  digitalWrite(0, HIGH); // Enable pullup for RX0
+  // PIO_Configure(
+  //   g_APinDescription[PINS_UART].pPort,
+  //   g_APinDescription[PINS_UART].ulPinType,
+  //   g_APinDescription[PINS_UART].ulPin,
+  //   g_APinDescription[PINS_UART].ulPinConfiguration);
+  // digitalWrite(0, HIGH); // Enable pullup for RX0
 
   // Initialize Analog Controller
-  pmc_enable_periph_clk(ID_AFEC0);
-  adc_init(AFEC0, SystemCoreClock, ADC_FREQ_MAX, ADC_STARTUP_FAST);
-  adc_configure_timing(AFEC0, 0, ADC_SETTLING_TIME_3, 1);
-  adc_configure_trigger(AFEC0, ADC_TRIG_SW, 0); // Disable hardware trigger.
-  adc_disable_interrupt(AFEC0, 0xFFFFFFFF); // Disable all ADC interrupts.
-  adc_disable_all_channel(AFEC0);
+  // pmc_enable_periph_clk(ID_AFEC0);
+  // adc_init(AFEC0, SystemCoreClock, ADC_FREQ_MAX, ADC_STARTUP_FAST);
+  // adc_configure_timing(AFEC0, 0, ADC_SETTLING_TIME_3, 1);
+  // adc_configure_trigger(AFEC0, ADC_TRIG_SW, 0); // Disable hardware trigger.
+  // adc_disable_interrupt(AFEC0, 0xFFFFFFFF); // Disable all ADC interrupts.
+  // adc_disable_all_channel(AFEC0);
 
   // Initialize analogOutput module
-   analogOutputInit();
+  //  analogOutputInit();
 
 //Add this here or delay(1) fails in main.cpp due to SysTick not firing. Not sure why.
  // cpu_irq_enable();

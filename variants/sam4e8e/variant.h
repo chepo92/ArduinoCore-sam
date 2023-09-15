@@ -16,8 +16,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef _VARIANT_MOTIONBOW // SAM4S4A ( 48 pin  )
-#define _VARIANT_MOTIONBOW
+#ifndef _VARIANT_SAM4S4E // SAM4S4A ( 48 pin  )
+#define _VARIANT_SAM4S4E
 
 /*----------------------------------------------------------------------------
  *        Definitions
@@ -32,25 +32,12 @@
 /** Master clock frequency */
 #define VARIANT_MCK		(F_CPU)  //(120000000ul) //  main after the PLL ( 120 MHz)
 
-/** USB Stuff used in USBCore.cpp */
-#define UDD_USB_INT_LEVEL 		5 // By default USB interrupt have low priority
-#define MAX_ENDPOINTS			7
-#define EP0 					0 //Control endpoint is endpoint zero
-#define EP_TYPE_CONTROL 		UDP_CSR_EPTYPE_CTRL
-#define EP_TYPE_INTERRUPT_IN	UDP_CSR_EPTYPE_INT_IN
-#define EP_TYPE_BULK_OUT		UDP_CSR_EPTYPE_BULK_OUT
-#define EP_TYPE_BULK_IN			UDP_CSR_EPTYPE_BULK_IN 
-
 //#define USBCON
 /*----------------------------------------------------------------------------
  *        Headers
  *----------------------------------------------------------------------------*/
 
 #include "Arduino.h"
-#ifdef __cplusplus
-#include "UARTClass.h"
-//#include "USARTClass.h" // motionbow does not have USART
-#endif
 
 #ifdef __cplusplus
 extern "C"{
@@ -59,25 +46,25 @@ extern "C"{
 /**
  * Libc porting layers
  */
-#if defined (  __GNUC__  ) /* GCC CS3 */
-#    include <syscalls.h> /** RedHat Newlib minimal stub */
-#endif
+// #if defined (  __GNUC__  ) /* GCC CS3 */
+// #    include <syscalls.h> /** RedHat Newlib minimal stub */
+// #endif
 
 /*----------------------------------------------------------------------------
  *        Pins
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT (17u)// 17 GPIO pins
-#define NUM_DIGITAL_PINS     (17u)
-#define NUM_ANALOG_INPUTS    (1u)
+//#define PINS_COUNT (17u)// 17 GPIO pins
+// #define NUM_DIGITAL_PINS     (17u)
+// #define NUM_ANALOG_INPUTS    (1u)
 
-#define digitalPinToPort(P)        ( g_APinDescription[P].pPort )
-#define digitalPinToBitMask(P)     ( g_APinDescription[P].ulPin )
+// #define digitalPinToPort(P)        ( g_APinDescription[P].pPort )
+// #define digitalPinToBitMask(P)     ( g_APinDescription[P].ulPin )
 //#define analogInPinToBit(P)        ( )
-#define portOutputRegister(port)   ( &(port->PIO_ODSR) )
-#define portInputRegister(port)    ( &(port->PIO_PDSR) )
-#define digitalPinHasPWM(P)        ( g_APinDescription[P].ulPWMChannel != NOT_ON_PWM || g_APinDescription[P].ulTCChannel != NOT_ON_TIMER )
+// #define portOutputRegister(port)   ( &(port->PIO_ODSR) )
+// #define portInputRegister(port)    ( &(port->PIO_PDSR) )
+// #define digitalPinHasPWM(P)        ( g_APinDescription[P].ulPWMChannel != NOT_ON_PWM || g_APinDescription[P].ulTCChannel != NOT_ON_TIMER )
 
 /*
  * portModeRegister(..) should return a register to set pin mode
@@ -98,70 +85,70 @@ extern "C"{
 // #define digitalPinToTimer(P)
 
 // Interrupts
-#define digitalPinToInterrupt(p)  ((p) < NUM_DIGITAL_PINS ? (p) : -1)
+// #define digitalPinToInterrupt(p)  ((p) < NUM_DIGITAL_PINS ? (p) : -1)
 
 /*
 // these pin numbers are the Arduino numbers ( ie LED on DIO 13)
 */
 
-#define PIX_DTA (3u) // pixel data out ( SPI MOSI, WS2812 DTA )
-#define PIX_CLK  (4u) // pixel clock out ( SPI CLK )
+// #define PIX_DTA (3u) // pixel data out ( SPI MOSI, WS2812 DTA )
+// #define PIX_CLK  (4u) // pixel clock out ( SPI CLK )
 
-#define USER_BUTTON (5u)
+// #define USER_BUTTON (5u)
 
-#define USB_SNS  (6u) // USB connect detect
-#define VBAT_SNS  (2u) // ADC on Battery input
+// #define USB_SNS  (6u) // USB connect detect
+// #define VBAT_SNS  (2u) // ADC on Battery input
 
-#define INT_PIN_ACC1  (7u) // Accelerometer interrupt 1
-#define INT_PIN_ACC2  (8u) // Accelerometer interrupt 2
-#define INT_PIN_GYR1  (9u) // Gyro interrupt 1
-#define INT_PIN_GYR2  (10u) // Gyro interrupt 2
+// #define INT_PIN_ACC1  (7u) // Accelerometer interrupt 1
+// #define INT_PIN_ACC2  (8u) // Accelerometer interrupt 2
+// #define INT_PIN_GYR1  (9u) // Gyro interrupt 1
+// #define INT_PIN_GYR2  (10u) // Gyro interrupt 2
 
-#define INT_PIN_SPI  (17u) // SPI interrupt pin
+// #define INT_PIN_SPI  (17u) // SPI interrupt pin
 
 /*
 * SPI Interfaces
 */
 
-#define SPI_INTERFACES_COUNT 1
+// #define SPI_INTERFACES_COUNT 1
 
-#define SPI_INTERFACE SPI0
-#define SPI_INTERFACE_ID ID_SPI
-#define SPI_CHANNELS_NUM 1
-#define PIN_SPI_SS0 (16u)
-#define PIN_SPI_MOSI (13u)
-#define PIN_SPI_MISO (14u)
-#define PIN_SPI_SCK (15u)
-#define BOARD_SPI_SS0 (16u)
-#define BOARD_SPI_DEFAULT_SS BOARD_SPI_SS0
+// #define SPI_INTERFACE SPI0
+// #define SPI_INTERFACE_ID ID_SPI
+// #define SPI_CHANNELS_NUM 1
+// #define PIN_SPI_SS0 (16u)
+// #define PIN_SPI_MOSI (13u)
+// #define PIN_SPI_MISO (14u)
+// #define PIN_SPI_SCK (15u)
+// #define BOARD_SPI_SS0 (16u)
+// #define BOARD_SPI_DEFAULT_SS BOARD_SPI_SS0
 
-#define BOARD_PIN_TO_SPI_PIN(x) \
-(x==BOARD_SPI_SS0 ? PIN_SPI_SS0 : PIN_SPI_SS0)
-#define BOARD_PIN_TO_SPI_CHANNEL(x) \
-(x==BOARD_SPI_SS0 ? 0 : 0)
+// #define BOARD_PIN_TO_SPI_PIN(x) \
+// (x==BOARD_SPI_SS0 ? PIN_SPI_SS0 : PIN_SPI_SS0)
+// #define BOARD_PIN_TO_SPI_CHANNEL(x) \
+// (x==BOARD_SPI_SS0 ? 0 : 0)
 
-static const uint8_t SS = BOARD_SPI_SS0;
-static const uint8_t MOSI = PIN_SPI_MOSI;
-static const uint8_t MISO = PIN_SPI_MISO;
-static const uint8_t SCK = PIN_SPI_SCK;
+// static const uint8_t SS = BOARD_SPI_SS0;
+// static const uint8_t MOSI = PIN_SPI_MOSI;
+// static const uint8_t MISO = PIN_SPI_MISO;
+// static const uint8_t SCK = PIN_SPI_SCK;
 
 /*
 * Wire Interfaces
 */
-#define WIRE_INTERFACES_COUNT 1
+// #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA 		(11u)
-#define PIN_WIRE_SCL 		(12u)
-#define WIRE_INTERFACE 		TWI0
-#define WIRE_INTERFACE_ID 	ID_TWI0
-#define WIRE_ISR_HANDLER 	TWI0_Handler
-#define WIRE_ISR_ID         TWI0_IRQn
+// #define PIN_WIRE_SDA 		(11u)
+// #define PIN_WIRE_SCL 		(12u)
+// #define WIRE_INTERFACE 		TWI0
+// #define WIRE_INTERFACE_ID 	ID_TWI0
+// #define WIRE_ISR_HANDLER 	TWI0_Handler
+// #define WIRE_ISR_ID         TWI0_IRQn
 
 /*
 * UART/USART Interfaces
 */
 // Serial
-#define PINS_UART (19u) // "all pins" mask for UART1 ie "Serial"
+// #define PINS_UART (19u) // "all pins" mask for UART1 ie "Serial"
 
 // USB
 //#define PINS_USB (30u) //single line in Pin array that indicates both USB pins
@@ -169,9 +156,9 @@ static const uint8_t SCK = PIN_SPI_SCK;
 /*
  * Analog pins
  */
-static const uint8_t A0 = 2;
+// static const uint8_t A0 = 2;
 
-#define ADC_RESOLUTION 12
+// #define ADC_RESOLUTION 12
 /*
  * DACC
  */
@@ -183,22 +170,22 @@ static const uint8_t A0 = 2;
 /*
 *PWM
 */
-#define PWM_INTERFACE PWM
-#define PWM_INTERFACE_ID ID_PWM
-#define PWM_FREQUENCY 1000
-#define PWM_MAX_DUTY_CYCLE 255
-#define PWM_MIN_DUTY_CYCLE 0
-#define PWM_RESOLUTION 8
+// #define PWM_INTERFACE PWM
+// #define PWM_INTERFACE_ID ID_PWM
+// #define PWM_FREQUENCY 1000
+// #define PWM_MAX_DUTY_CYCLE 255
+// #define PWM_MIN_DUTY_CYCLE 0
+// #define PWM_RESOLUTION 8
 
 /*
  * TC
  */
-#define TC_INTERFACE TC0
-#define TC_INTERFACE_ID ID_TC0
-#define TC_FREQUENCY 1000
-#define TC_MAX_DUTY_CYCLE 255
-#define TC_MIN_DUTY_CYCLE 0
-#define TC_RESOLUTION 8
+// #define TC_INTERFACE TC0
+// #define TC_INTERFACE_ID ID_TC0
+// #define TC_FREQUENCY 1000
+// #define TC_MAX_DUTY_CYCLE 255
+// #define TC_MIN_DUTY_CYCLE 0
+// #define TC_RESOLUTION 8
 
 #ifdef __cplusplus
 }
@@ -209,14 +196,14 @@ static const uint8_t A0 = 2;
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/
 
-#ifdef __cplusplus
+// #ifdef __cplusplus
 
-extern UARTClass Serial;
-
-
+// extern UARTClass Serial;
 
 
-#endif
+
+
+// #endif
 
 // These serial port names are intended to allow libraries and architecture-neutral
 // sketches to automatically default to the correct port name for a particular type
@@ -233,13 +220,13 @@ extern UARTClass Serial;
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
-#define SERIAL_PORT_MONITOR         Serial
-#define SERIAL_PORT_USBVIRTUAL      SerialUSB
+// #define SERIAL_PORT_MONITOR         Serial
+// #define SERIAL_PORT_USBVIRTUAL      SerialUSB
 
-#define SERIAL_PORT_HARDWARE_OPEN   Serial
+// #define SERIAL_PORT_HARDWARE_OPEN   Serial
 
-#define SERIAL_PORT_HARDWARE        Serial
+// #define SERIAL_PORT_HARDWARE        Serial
 
-#endif /* _VARIANT_MOTIONBOWS */
+#endif /* _VARIANT_SAM4S4E */
 
 
