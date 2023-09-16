@@ -144,15 +144,15 @@ int main()
 
 	for (;;)
 	{
-		loop();
+		// loop();
 		//if (serialEventRun) serialEventRun();
-    // while (1)
-    // {
-    //   PIOE->PIO_SODR = 1 << LED_PIN;
-    //   delay (200000);
-    //   PIOE->PIO_CODR = 1 << LED_PIN;
-    //   delay (200000);
-    // }    
+    while (1)
+    {
+      PIOE->PIO_SODR = 1 << LED_PIN;
+      delay (200000);
+      PIOE->PIO_CODR = 1 << LED_PIN;
+      delay (200000);
+    }    
 	}
 
 	return 0 ; 
