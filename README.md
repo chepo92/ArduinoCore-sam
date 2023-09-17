@@ -1,14 +1,15 @@
-# Arduino Core for SAM3 and SAM4 CPU
 
-This repository contains the source code and configuration files of the Arduino Core for Atmel's SAM3X processor (used on the [Arduino Due](https://www.arduino.cc/en/Main/ArduinoBoardDue) board).
+# Arduino Core for SAM4 CPU, Baremetal branch 
+
+This repository contains the source code and configuration files of the Arduino Core for Atmel's SAM4E processor.
 
 ## Installation on Arduino IDE
 
-This core is available as a package in the Arduino IDE cores manager.
-Just open the "Boards Manager" and install the package called:
+Copy or clone repo content into: 
 
- * **Arduino SAM Boards (32-bit ARM Cortex-M3)**
+C:\Users\{User}}\AppData\Local\Arduino15\packages\arduino\hardware\{give a name Eg: sam4E-git}\0.0.1
 
+Then the boards will be listed under "ARM SAM4 (32-bits) Boards Baremetal"
 ## Installation on VSCode
 
 Use Platformio extension with atmelsam framework
@@ -33,6 +34,10 @@ platform_packages =
     toolchain-gccarmnoneeabi @ 1.40804.0
 
 ```
+
+## Requirements 
+
+arm-none-eabi-gcc v4.8.3-2014q1 
 
 ## Support
 
