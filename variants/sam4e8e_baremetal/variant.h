@@ -1,6 +1,7 @@
 #ifndef _VARIANT_SAM4E8E_BAREMETAL // SAM4E8E ( 48 pin  )
 #define _VARIANT_SAM4E8E_BAREMETAL
 
+#include <stdint.h>
 #include "Arduino.h"
 
 
@@ -58,11 +59,13 @@ extern "C"{
 #define PIO_WPKEY 0x50494F // 0/1: Disables/Enables the Write Protect if WPKEY corresponds to 0x50494F (“PIO” in ASCII).
 
 
+extern void delay( uint32_t dwMs ) ; // From arduino wiring
 
 
 #ifdef __cplusplus
-}
-#endif
+} // extern "C"
+
+#endif // __cplusplus
 
 
 
