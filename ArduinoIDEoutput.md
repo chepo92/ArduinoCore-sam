@@ -158,3 +158,65 @@ Linking everything together...
 
 "C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-size" -A "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.elf"
 El Sketch usa 660 bytes (0%) del espacio de almacenamiento de programa. El máximo es 262144 bytes.
+
+
+
+FQBN: arduino:sam3X4SE:motionbow
+Using board 'motionbow' from platform in folder: C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0
+Using core 'arduino' from platform in folder: C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0
+
+Detectando las librerías usadas...
+C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1/bin/arm-none-eabi-g++ -c -g -Os -w -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -w -x c++ -E -CC -mcpu=cortex-m4 -mthumb -DF_CPU=120000000ul -DARDUINO=10607 -DARDUINO_MOTIONBOW -DARDUINO_ARCH_SAM3X4SE -D__SAM4S4A__ -mthumb -DUSB_VID=0x2341 -DUSB_PID=0x003e -DUSBCON -DUSB_MANUFACTURER="LaserX" -DUSB_PRODUCT="laserX bow" -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/libsam -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/ -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/ -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\cores\arduino -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\variants\motionbow C:\Users\Axel\AppData\Local\Temp\arduino\sketches\8DF82A43C8D353D6DC3F56202E4FC87B\sketch\BareMetal.ino.cpp -o nul
+Generating function prototypes...
+C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1/bin/arm-none-eabi-g++ -c -g -Os -w -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -w -x c++ -E -CC -mcpu=cortex-m4 -mthumb -DF_CPU=120000000ul -DARDUINO=10607 -DARDUINO_MOTIONBOW -DARDUINO_ARCH_SAM3X4SE -D__SAM4S4A__ -mthumb -DUSB_VID=0x2341 -DUSB_PID=0x003e -DUSBCON -DUSB_MANUFACTURER="LaserX" -DUSB_PRODUCT="laserX bow" -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/libsam -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/ -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/ -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\cores\arduino -IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\variants\motionbow C:\Users\Axel\AppData\Local\Temp\arduino\sketches\8DF82A43C8D353D6DC3F56202E4FC87B\sketch\BareMetal.ino.cpp -o C:\Users\Axel\AppData\Local\Temp\2975363225\sketch_merged.cpp
+C:\Users\Axel\AppData\Local\Arduino15\packages\builtin\tools\ctags\5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives C:\Users\Axel\AppData\Local\Temp\2975363225\sketch_merged.cpp
+Compilando el sketch...
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD -mcpu=cortex-m4 -mthumb -DF_CPU=120000000ul -DARDUINO=10607 -DARDUINO_MOTIONBOW -DARDUINO_ARCH_SAM3X4SE -D__SAM4S4A__ -mthumb -DUSB_VID=0x2341 -DUSB_PID=0x003e -DUSBCON "-DUSB_MANUFACTURER=\"LaserX\"" "-DUSB_PRODUCT=\"laserX bow\"" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/libsam" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/CMSIS/CMSIS/Include/" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/CMSIS/Device/ATMEL/" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\cores\\arduino" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\variants\\motionbow" "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B\\sketch\\BareMetal.ino.cpp" -o "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B\\sketch\\BareMetal.ino.cpp.o"
+In file included from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/core_cm4.h:145:0,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4s/include/sam4s4a.h:210,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4s/include/sam4s.h:43,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4.h:127,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam.h:202,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/libsam/chip.h:25,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\cores\arduino/Arduino.h:42,
+                 from C:\Users\Axel\Documents\Arduino\BareMetal\BareMetal.ino:1:
+C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/core_cmFunc.h:585:57: warning: unused parameter 'fpscr' [-Wunused-parameter]
+ __attribute__( ( always_inline ) ) static __INLINE void __set_FPSCR(uint32_t fpscr)
+                                                         ^
+Compilando librerías...
+Compilando el núcleo...
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++" -c -g -Os -Wall -Wextra -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD -mcpu=cortex-m4 -mthumb -DF_CPU=120000000ul -DARDUINO=10607 -DARDUINO_MOTIONBOW -DARDUINO_ARCH_SAM3X4SE -D__SAM4S4A__ -mthumb -DUSB_VID=0x2341 -DUSB_PID=0x003e -DUSBCON "-DUSB_MANUFACTURER=\"LaserX\"" "-DUSB_PRODUCT=\"laserX bow\"" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/libsam" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/CMSIS/CMSIS/Include/" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\system/CMSIS/Device/ATMEL/" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\cores\\arduino" "-IC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\variants\\motionbow" "C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\variants\\motionbow\\variant.cpp" -o "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B\\core\\variant.cpp.o"
+In file included from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/core_cm4.h:145:0,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4s/include/sam4s4a.h:210,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4s/include/sam4s.h:43,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam4.h:127,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/sam.h:202,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/libsam/chip.h:25,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\cores\arduino/Arduino.h:42,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\variants\motionbow\variant.h:49,
+                 from C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\variants\motionbow\variant.cpp:19:
+C:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/core_cmFunc.h:585:57: warning: unused parameter 'fpscr' [-Wunused-parameter]
+ __attribute__( ( always_inline ) ) static __INLINE void __set_FPSCR(uint32_t fpscr)
+                                                         ^
+Using precompiled core: C:\Users\Axel\AppData\Local\Temp\arduino\cores\arduino_sam3X4SE_motionbow_96fe6e4008ead519411e4bf8e9979492\core.a
+Linking everything together...
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-gcc" -mcpu=cortex-m4 -mthumb -Os -Wl,--gc-sections "-TC:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\variants\\motionbow/linker_scripts/gcc/flash.ld" "-Wl,-Map,C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.map" -o "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.elf" "-LC:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B" -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--entry=Reset_Handler -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--start-group -u _sbrk -u link -u _close -u _fstat -u _isatty -u _lseek -u _read -u _write -u _exit -u kill -u _getpid "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B\\sketch\\BareMetal.ino.cpp.o" "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B\\core\\variant.cpp.o" "C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam3X4SE\\0.0.0\\variants\\motionbow/libsam_sam4s4a_gcc_rel.a" "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/..\\..\\cores\\arduino_sam3X4SE_motionbow_96fe6e4008ead519411e4bf8e9979492\\core.a" -Wl,--end-group -lm -gcc
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-objcopy" -O binary "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.elf" "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.bin"
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-objcopy" -O binary "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.elf" "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.bin"
+
+"C:\\Users\\Axel\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-size" -A "C:\\Users\\Axel\\AppData\\Local\\Temp\\arduino\\sketches\\8DF82A43C8D353D6DC3F56202E4FC87B/BareMetal.ino.elf"
+El Sketch usa 20340 bytes (7%) del espacio de almacenamiento de programa. El máximo es 262144 bytes.
+
+
+Librería libsam
+-IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/libsam 
+Librería CMSIS
+-IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/CMSIS/Include/ 
+Librería CMSIS
+-IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\system/CMSIS/Device/ATMEL/ 
+Librería Arduino Core
+-IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\cores\arduino 
+Librería Variante tarjeta
+-IC:\Users\Axel\AppData\Local\Arduino15\packages\arduino\hardware\sam3X4SE\0.0.0\variants\motionbow 
+
+C:\Users\Axel\AppData\Local\Temp\arduino\sketches\8DF82A43C8D353D6DC3F56202E4FC87B\sketch\BareMetal.ino.cpp
