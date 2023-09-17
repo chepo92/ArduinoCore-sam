@@ -160,7 +160,7 @@ extern void loop( void ) ;
 #endif // __cplusplus
 
 
-
+#include "pio.h"
 #include "variant.h"
 
 
